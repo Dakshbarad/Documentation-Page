@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-size: 1.5rem;
+    background-color: lightgoldenrodyellow;
+}
+
+/* Navbar */
+#navbar{
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    min-width: 300px;
+    width: 300px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    align-items: center;
+    border-right: 2px solid black;
+}
+
+#navbar header{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: .5px;
+}
+
+#navbar ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li{
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    border-bottom: 1px solid black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* main section */
+#main-doc{
+    margin-left: 300px;
+    padding: 1rem;
+}
+
+.main-section header{
+    font-weight: bold;
+}
+
+.code{
+    margin-left: 1rem;
+    background-color: lightgrey;
+}
+
+@media (max-width: 1000px){
+    #navbar{
+        background-color: white;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 150px;
+        overflow-y: scroll;
+        align-items: center;
+        border-right: 2px solid black;
+    }
+
+    #navbar header{
+        margin-bottom: 15px;
+    }
+
+    #main-doc{
+        margin: 160px 1rem 10px 1rem;
+    }
+}

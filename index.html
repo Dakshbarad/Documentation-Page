@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>DOM Manipulation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Select_and_Manipulate">Select and Manipulate</a></li>
+            <li><a class="nav-link" href="#Different_ways_of_selecting_an_object_in_javascript">Different ways of selecting an object in javascript</a></li>
+            <li><a class="nav-link" href="#Manipulating_Attributes">Manipulating Attributes</a></li>
+            <li><a class="nav-link" href="#Eventlistener">Eventlistener</a></li>
+            <li><a class="nav-link" href="#Semantic_UI">Semantic UI</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <p>It is the interface between javascript and html+css.<br>
+            This is how we can control the interactivity on a page using the javascript we have learnt.<br></p>
+            <p>First we need to understand how the world of web works:
+                <ul>
+                    <li>Every html file that we created is converted into one big javascript object called document when it needs to be executed. Every tag is another object in the object document.</li>
+                    <li>There are a vast number of properties in dom that we can set like mousewheel and hover and many more. It is not possible to learn all of them. We will learn the important one's and will learn about the others as we encounter them.</li>
+                    <li>Dom works in a very simple way.</li>
+                </ul>
+            </p>
+        </section>
+
+        <section id="Select_and_Manipulate" class="main-section">
+            <header>Select and Manipulate</header>
+            <p>Selecting an object:<br>
+                <code class="code">var h1=document.querySelector("h1");</code><br>
+            </p>
+            <p>Manipulating an object:<br>
+                <code class="code">h1.style.color="pink";</code>
+            </p>
+        </section>
+
+        <section id="Different_ways_of_selecting_an_object_in_javascript" class="main-section">
+            <header>Different ways of selecting an object in javascript</header>
+            <p>
+                Some of the important one's are:<br>
+                <code class="code">document.getElementById("...");<br></code>
+                <code class="code">document.getElementsByClassName("...);         //The variable using this is a list of the elements having the class name<br></code>
+                <code class="code">document.getElementsByTagName("...");          //List of the elements<br></code>
+                All this can be done by using query selector meaning all the selectors in css can be used here but query selector returns only the first element that matches the value.<br>
+            </p>
+        </section>
+
+        <section id="Manipulating_Attributes" class="main-section">
+            <header>Manipulating Attributes</header>
+            <p>
+                We can change the attributes of a tag.<br>
+                <code class="code">selector.getAttribute("attribute")     //retrieves the value of the attribute<br></code>
+                <code class="code">selector.setAttribute("attribute","value")    //Sets the value of the attribute<br></code>
+            </p>
+            <p>
+                To change the value of text being displayed on the page we can use textcontent or innerHTML.<br>
+                We already learnt what basic dom manipulation is and how to use them. It included changing styles, attributed or classes. But it was all happening when the page was loaded.<br>
+                Now we will learn dom manipulation to make page interactive. We will learn how to do something when particulat event happens like a click or hover.<br>
+            </p>
+        </section>
+
+        <section id="Eventlistener" class="main-section">
+            <header>Eventlistener</header>
+            <p>
+                This is achieved using an eventlistener that listens for an event on our selectors.<br>
+                <code class="code">
+                    selector.addEventListener(type,functiontocall);<br>
+                </code>
+            </p>
+            <p>
+                Type means the type of event like a "click". Functiontocall can be an anonymous function or some external function.<br>
+                We can have multiple listeners on same element and they will be executed one after the other.<br>
+                Inside of a listener the keyword this ,if used refers to the item that was clicked or event took place on.<br>
+            </p>
+        </section>
+
+        <section id="Semantic_UI" class="main-section">
+            <header>Semantic UI</header>
+            <p>
+                <li>One of the frameworks that we learned and used was bootstrap</li> 
+                <li>Semantic UI is another such framework to make page more attractive and meaningful. A great thing about this framework is that it has meaningful classes whose names themselves defines what they do.</li> 
+            </p>
+        </section>
+    </main>
+</body>
+</html>
